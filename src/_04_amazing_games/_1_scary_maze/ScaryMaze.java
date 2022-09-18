@@ -57,11 +57,11 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		int mouseColor = maze.getRGB(mouseX, mouseY);	
 		
 		//4. Print the mouseColor variable (Hint: use syso)
-		
+		System.out.println(mouseColor);
 		//5.  Run your program and move your mouse over the START COLOR. A number will be printed to the console
 		
 		
-		int startColor=0;
+		int startColor=-7617718;
 		//6. Change the value of this startColor variable to the number printed in the previous step. 
 		
 		
@@ -73,8 +73,8 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//7. Make a new int variable for the background color of the maze
-
-		
+		int A = -1499549;
+		int B = -5317;
 		//8. Run the program and move the mouse over the BACKGROUND COLOR. 
 		//   Use the number that is printed to the console to set the background color variable 
 
@@ -85,9 +85,9 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		call the scare method - scare();
-			
-			//13.  If the mouse is on the end color, pop up a message to tell them they won!
+			if (mouseColor == A) scare();			//13.  If the mouse is on the end color, pop up a message to tell them they won!
 			//    (you will need to get the number of the END COLOR by moving the mouse over it)
+			if (mouseColor == B) JOptionPane.showMessageDialog(null, "You won");
 
 					
 			
@@ -107,14 +107,15 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 			//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.		
 			//11. Play the scary sound. Hint: use the playScarySound method with the name of your sound file		
 
+			playScarySound("standardScarySound.wav");
 			
 		}	
 		/**********  SHOW A PICTURE ***************/
 
 		//12. Find a scary image and drop it into the _04_amazing_games._1_scary_maze package. 
 		//    Use the showScaryImage method below and send it the name of your picture file
-		
-		
+		showScaryImage("showScaryImage.jpeg");
+		playScarySound("standardScarySound.wav");
 	}
 	
 

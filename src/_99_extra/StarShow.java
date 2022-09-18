@@ -10,7 +10,7 @@ import org.jointheleague.graphical.robot.Robot;
 public class StarShow {
 
 	// This code creates a Batman Robot
-	Robot batman = new Robot("batman");
+	Robot rob = new Robot("rob");
 	
 	void makeStars() {
 		
@@ -63,11 +63,12 @@ public class StarShow {
 
 	private void drawStar(int starSize) {
 		// Put the robot's pen down
-
+		rob.penDown();
     	// COUNT. Create an int variable that will count how many lines of the star we have drawn.
     	//        The start value will be zero because no lines have yet been drawn. Use this code:
 		  /**     int lines = 0;    **/
-
+		
+	     int lines = 0;  
 		// LOOP: Start a while loop to repeat the following code until 5 lines have been drawn
 
 				// MOVE the robot the distance of the starSize variable
